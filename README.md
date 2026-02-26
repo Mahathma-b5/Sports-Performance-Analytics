@@ -8,13 +8,29 @@ and a player comparison between Lionel Messi and Cristiano Ronaldo.
 ## Project Structure
 Sports-Performance-Analytics/
 │
-├── data/
-│   └── raw/ (Player.csv, Player_Attributes.csv)
-├── notebooks/
-│   └── 01_eda.ipynb
-├── venv/
-├── requirements.txt
-└── README.md
+├── data/                         # Processed or small sample data only
+│   ├── processed/                # Cleaned datasets
+│   └── raw/                      # (EMPTY in GitHub — ignored via .gitignore)
+│
+├── notebooks/                    # Jupyter notebooks for EDA & analysis
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_eda.ipynb
+│   └── 03_modeling.ipynb
+│
+├── src/                          # Python scripts (modular code)
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   ├── visualization.py
+│   └── modeling.py
+│
+├── reports/                      # Generated reports, images, plots
+│   └── figures/
+│
+├── .gitignore                    # Ignore raw data, venv, large files
+├── requirements.txt              # Python dependencies
+├── README.md                     # Project documentation
+└── venv/                         # Virtual environment (ignored)
+
 
 ## Features
 - Load and merge FIFA player datasets  
